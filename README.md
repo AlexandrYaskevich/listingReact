@@ -1,3 +1,9 @@
+![CI](https://github.com/<AlexandrYaskevich>/<https://github.com/AlexandrYaskevich/listingReact>/actions/workflows/web.yml/badge.svg)
+
+https://ci.appveyor.com/project/AlexandrYaskevich/listingReact
+
+Github Pages: https://AlexandrYaskevich.github.io/listingReact/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
