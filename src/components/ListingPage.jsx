@@ -1,4 +1,3 @@
-import React from "react";
 import "/src/css/main.css";
 import Item_details from "./Item_detalis";
 import Item_image from "./Item_image";

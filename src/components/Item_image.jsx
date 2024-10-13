@@ -1,4 +1,3 @@
-import React from "react";
 import "/src/css/main.css";
 
 const Item_image = ({ url, MainImage }) => {
