@@ -1,11 +1,19 @@
 import "/src/css/main.css";
 import cn from "classnames";
+import React from "react";
 
-const Item_details = ({ title, currency_code, price, quantity }) => {
+interface ItemDetailsProps {
+  title: string;
+  currency_code: string;
+  price: number | string;  
+  quantity: number;
+}
+
+const ItemDetails: React.FC<ItemDetailsProps> = ({ title, currency_code, price, quantity }) => {
   const levelLow = 10;
   const levelHigh = 20;
 
-  const preparedTitle = title?.length > 50 ? `${title.slice(0, 50)}...` : title;
+  const preparedTitle = title.length > 50 ? `${title.slice(0, 50)}...` : title;
 
   return (
     <div className="item-details">
@@ -14,8 +22,7 @@ const Item_details = ({ title, currency_code, price, quantity }) => {
         {price}
         {currency_code}
       </p>
-      <p
-        className={cn("item-quantity", {
+      <p className={cn("item-quantity", {
           "level-low": quantity <= levelLow,
           "level-medium": quantity <= levelHigh && quantity > levelLow,
           "level-high": quantity > levelHigh,
@@ -26,4 +33,5 @@ const Item_details = ({ title, currency_code, price, quantity }) => {
     </div>
   );
 };
-export default Item_details;
+
+export default ItemDetails;
