@@ -1,6 +1,7 @@
-import "/src/css/main.css";
+import "./main.css";
 import cn from "classnames";
 import React from "react";
+
 
 interface ItemDetailsProps {
   title: string;
