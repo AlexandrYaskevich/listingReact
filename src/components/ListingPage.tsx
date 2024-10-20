@@ -1,27 +1,24 @@
 
-import './main.css'
+import "./main.css"
 import ItemDetails  from "./Item_detalis";
 import ItemImage from "./Item_image";
 
 
-interface EtsyDataItem {
-listing_id: number; 
-url: string;
-MainImage?: {
-  url_570xN: string;
-};
-title: string;
-currency_code: string;
-price: number | string; 
-quantity: number;
+export interface EtsyDataItem {
+  listing_id: number; 
+  url: string;
+  MainImage: { url_570xN: string }; 
+  title: string;
+  currency_code: string;
+  price: number | string; 
+  quantity: number;
 }
 
 interface ListingPageProps {
   etsyData: EtsyDataItem[];
 }
 
-const ListingPage: React.FC<ListingPageProps> = ({ etsyData }) => {
-
+const ListingPage =({etsyData}: ListingPageProps) => {
   return (
     <div className="item-list">
       {etsyData.map(
